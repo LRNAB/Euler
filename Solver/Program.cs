@@ -12,11 +12,11 @@ namespace Solver
             var stopwatch = new System.Diagnostics.Stopwatch();
 
             stopwatch.Start();
-            solution = Problems._001.Solve();
+            solution = Problems._002.Solve();
             stopwatch.Stop();
 
             Console.WriteLine(solution);
-            Console.WriteLine(String.Concat("Took ", stopwatch.ElapsedMilliseconds, " ms"));
+            Console.WriteLine(String.Concat("Took ", stopwatch.ElapsedTicks, " ticks"));
             Console.ReadKey();
         }
     }
