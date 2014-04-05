@@ -16,6 +16,7 @@ namespace Solver.Problems
 
             for (int i = 0; i < 1000; i++)
             {
+                // Check if number is cleanly (Remainder = 0) divisble by 3 OR 5
                 if (i % 3 == 0 || i % 5 == 0)
                     sum += i;
             }

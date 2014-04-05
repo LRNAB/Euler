@@ -14,20 +14,24 @@ namespace Solver.Problems
         public static Int32 Solve()
         {
             var sum = 0;
+
             var firstTerm = 0;
             var secondTerm = 1;
             var nextTerm = 0;
-            
-            while (nextTerm <= 4000000)
+
+            // Fibonacci sequence term cannot exceed 4 million
+            while (nextTerm < 4000000)
             {
+                // Get next Fibonacci sequence term
                 nextTerm = firstTerm + secondTerm;
+
+                // Update variables for new term
                 firstTerm = secondTerm;
                 secondTerm = nextTerm;
 
+                // Check if term is even by dividing by 2 and checking if remainder is zero
                 if (nextTerm % 2 == 0)
-                {
-                    sum = sum + nextTerm;
-                }
+                    sum += nextTerm;
             }
 
             return sum;
