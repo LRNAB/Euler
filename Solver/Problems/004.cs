@@ -12,19 +12,26 @@ namespace Solver.Problems
     class _004
     {
         /// <summary>
-        /// We only need to multiply 2 numbers which must be between 100 and 999 as 3-Digit only
+        /// We only need to multiply 2 numbers which must be between 100 and 999 as 3-Digits only
         /// We can reverse the resulting number in String form and check if both normal & reverse are same
         /// </summary>
         public static void Solve()
         {
             var palindromes = new List<Int32>();
 
+            // Start with a number eg i
             for (int i = 100; i < 999; i++)
             {
+                // Find products for i with 3-Digit numbers from 100 to 999
                 for (int v = 100; v < 999; v++)
                 {
+                    // Find product
                     var result = Convert.ToString(i * v);
+
+                    // Reverse the product eg 10000 --> 00001
                     var reverse = new String(result.Reverse().ToArray());
+
+                    // Check if normal and reverse are same eg 10000 != 00001
                     if (String.Equals(result, reverse))
                     {
                         Console.WriteLine(String.Concat("Found palindrome ", result));
