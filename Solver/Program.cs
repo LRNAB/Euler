@@ -8,7 +8,7 @@ namespace Solver
     {
         static void Main(string[] args)
         {
-            Problems._005.Solve();
+            Problems._006.Solve();
             Console.ReadKey();
         }
     }
