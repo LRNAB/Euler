@@ -33,6 +33,7 @@ namespace Solver.Problems
     {
         public static void Solve()
         {
+            // 950 Characters
             var longNumber = "73167176531330624919225119674426574742355349194934" +
      "85861560789112949495459501737958331952853208805511" +
      "12540698747158523863050715693290963295227443043557" +
@@ -57,19 +58,19 @@ namespace Solver.Problems
             char[] numbers = longNumber.ToCharArray();
             long greatestProduct = 0;
 
+            // Foundation Number must be Total Char - Adjacent Digits
             for (int i = 0; i < 938; i++)
             {
+                // Find product of 13 numbers in Array starting from foundation number till the 13th number from it.
                 long product = 1;
                 for (int x = 0; x < 13; x++)
                 {
-                    var p = Convert.ToInt32(numbers[i + x].ToString());
-                    product *= p;
+                    product *= Convert.ToInt32(numbers[i + x].ToString());
                 }
 
                 if (product > greatestProduct)
                     greatestProduct = product;
             }
-
 
             Console.WriteLine(String.Concat("Greatest Product is ", greatestProduct));
         }
