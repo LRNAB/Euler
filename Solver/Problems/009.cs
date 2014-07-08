@@ -29,9 +29,6 @@ namespace Solver.Problems
     /// </summary>
     class _009
     {
-        private static int a;
-        private static int c;
-
         public static void Solve()
         {
             // Rearrange equation to make c the subject
@@ -52,8 +49,8 @@ namespace Solver.Problems
 
             for (int b = 1; b < 1000; b++)
             {
-                a = (500000 - 1000 * b) / (1000 - b);
-                c = 1000 - a - b;
+                var a = (500000 - 1000 * b) / (1000 - b);
+                var c = 1000 - a - b;
 
                 // Check: a + b + c = 1000, a² + b² = c²
                 if (a + b + c == 1000 && (a * a) + (b * b) == (c * c))
