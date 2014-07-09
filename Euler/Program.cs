@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Solver
+namespace Euler
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Problems._009.Solve();
+            Problems._010.Solve();
             Console.ReadKey();
         }
     }

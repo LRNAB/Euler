@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-namespace Solver.Problems
+namespace Euler.Problems
 {
     /// <summary>
     /// The prime factors of 13195 are 5, 7, 13 and 29.

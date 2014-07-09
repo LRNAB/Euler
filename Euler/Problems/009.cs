@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Solver.Problems
+namespace Euler.Problems
 {
     /// <summary>
     // A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,

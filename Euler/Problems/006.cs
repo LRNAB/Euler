@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Solver.Problems
+namespace Euler.Problems
 {
     /// <summary>
     /// The sum of the squares of the first ten natural numbers is,

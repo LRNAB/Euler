@@ -18,7 +18,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace Solver.Problems
+namespace Euler.Problems
 {
     /// <summary>
     /// 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.

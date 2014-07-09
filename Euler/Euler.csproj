@@ -7,8 +7,8 @@
     <ProjectGuid>{B826D881-51A9-4FE0-BD31-EA39820B323B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Solver</RootNamespace>
-    <AssemblyName>Solver</AssemblyName>
+    <RootNamespace>Euler</RootNamespace>
+    <AssemblyName>Euler</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Solver.Program</StartupObject>
+    <StartupObject>Euler.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -50,6 +50,7 @@
     <Compile Include="Problems\007.cs" />
     <Compile Include="Problems\008.cs" />
     <Compile Include="Problems\009.cs" />
+    <Compile Include="Problems\010.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
