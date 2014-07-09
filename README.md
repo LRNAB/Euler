@@ -1,4 +1,4 @@
-Solutions to Project Euler Problems
+[![Build status](https://ci.appveyor.com/api/projects/status/vs1fjwqquxfc7naw)](https://ci.appveyor.com/project/LRNAB/euler)
 
 <table>
 <thead><tr><th colspan=10>Problems</th></tr></thead>
