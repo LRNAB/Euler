@@ -13,6 +13,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+using Euler.Maths;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,38 +34,13 @@ namespace Euler.Problems
 
             while (primesFound < 10001)
             {
-                // All primes except 2 are odd so no need to check by 2
-                int i = 3;
-                
-                // Check until Square root only as after that the divisors flip and repeat eg
-                // 2 x 5 = 10
-                // 5 x 2 = 10
-                // So we only need to check until Sqrt(10) = 3.16...
-                while (i <= Math.Sqrt(n))
+                if (Prime.IsPrimeBruteForce(n))
                 {
-                    if (n % i == 0)
-                    {
-                        // Remainder was zero so number isn't a prime.
-                        // All primes except 2 are odd so only need to test odd numbers and skip even numbers.
+                    primesFound++;
+
+                    if (primesFound < 10001)
                         n += 2;
-
-                        // Reset loop for next odd number
-                        i = 3;
-                        continue;
-                    }
-                    else
-                    {
-                        // Increment to next odd number since n would never be even so division by even numbers is
-                        // useless
-                        i += 2;
-                    }
                 }
-
-                // No factor found so we have a new prime. 
-                primesFound++;
-
-                if(primesFound < 10001)
-                    n += 2;
             }
 
             Console.WriteLine(String.Concat("10001st Prime is ", n));
