@@ -17,13 +17,14 @@ namespace Euler
             new _007(),
             new _008(),
             new _009(),
-            new _010()
+            new _010(),
+            new _011()
         };
 
         static void Main()
         {
             Console.WriteLine("Please enter the number of the problem you want to solve:");
-            Console.WriteLine(Problems[Convert.ToInt32(Console.ReadLine())].Solve());
+            Console.WriteLine(Problems[Convert.ToInt32(Console.ReadLine()) - 1].Solve());
             Console.ReadKey();
         }
     }
