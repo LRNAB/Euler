@@ -22,7 +22,7 @@ namespace Euler.Problems
     /// The prime factors of 13195 are 5, 7, 13 and 29.
     /// What is the largest prime factor of the number 600851475143 ?
     /// </summary>
-    class _003
+    public class _003 : IProblem
     {
         /// <summary>
         /// We solve this problem by finding all the prime factors of a number eg 12
@@ -33,7 +33,7 @@ namespace Euler.Problems
         /// So the prime factors are 2, 3
         /// The greatest is the last one ie 3
         /// </summary>
-        public static void Solve()
+        public String Solve()
         {
             var number = 600851475143;
             var factors = new List<long>();
@@ -52,7 +52,7 @@ namespace Euler.Problems
                 }
             }
 
-            Console.WriteLine(String.Concat("Largest Prime Factor of the number 600851475143 is ", factors[factors.Count - 1]));
+            return String.Format("Largest Prime Factor of the number 600851475143 is {0}", factors[factors.Count - 1]);
         }
     }
 }

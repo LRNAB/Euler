@@ -24,9 +24,9 @@ namespace Euler.Problems
     // There exists exactly one Pythagorean triplet for which a + b + c = 1000.
     // Find the product abc.
     /// </summary>
-    class _009
+    public class _009 : IProblem
     {
-        public static void Solve()
+        public String Solve()
         {
             // Rearrange equation to make c the subject
             // a + b + c = 1000
@@ -44,18 +44,17 @@ namespace Euler.Problems
             // a(1000 - b) = 500000 - 1000b
             // a = (500000 - 1000b) ÷ (1000 - b)
 
-            for (int b = 1; b < 1000; b++)
+            for (var b = 1; b < 1000; b++)
             {
                 var a = (500000 - 1000 * b) / (1000 - b);
                 var c = 1000 - a - b;
 
                 // Check: a + b + c = 1000, a² + b² = c²
                 if (a + b + c == 1000 && (a * a) + (b * b) == (c * c))
-                {
-                    Console.WriteLine(String.Concat("Pythagorean triplet for which a + b + c = 1000 is ", a * b * c));
-                    break;
-                }
+                    return String.Format("Pythagorean triplet for which a + b + c = 1000 is {0}", a * b * c);
             }
-        }        
+
+            return "Error: Unable to find Pythagorean triplet";
+        }
     }
 }

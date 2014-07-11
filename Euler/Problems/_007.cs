@@ -22,12 +22,12 @@ namespace Euler.Problems
     /// By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
     /// What is the 10001st prime number?
     /// </summary>
-    class _007
+    public class _007 : IProblem
     {
-        public static void Solve()
+        public String Solve()
         {
-            int primesFound = 1;
-            int n = 3;
+            var primesFound = 1;
+            var n = 3;
 
             while (primesFound < 10001)
             {
@@ -40,7 +40,7 @@ namespace Euler.Problems
                 }
             }
 
-            Console.WriteLine(String.Concat("10001st Prime is ", n));
+            return String.Format("10001st Prime is {0}", n);
         }
     }
 }

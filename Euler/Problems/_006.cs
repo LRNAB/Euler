@@ -25,32 +25,32 @@ namespace Euler.Problems
     /// Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
     /// Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
     /// </summary>
-    class _006
+    public class _006 : IProblem
     {
-        public static void Solve()
+        public String Solve()
         {
             // Find sum of squares of first 100 natural numbers
             var squareSum = 0;
 
-            for (int i = 1; i <= 100; i++)
+            for (var i = 1; i <= 100; i++)
             {
                 squareSum = squareSum + (i * i);
             }
-            Console.WriteLine(String.Concat("Sum of Squares of first 100 natural numbers is ", squareSum));
+            Console.WriteLine("Sum of Squares of first 100 natural numbers is {0}", squareSum);
 
             // Find square of sum of first 100 natural numbers
             var sumSquare = 0;
 
-            for (int i = 1; i <= 100; i++)
+            for (var i = 1; i <= 100; i++)
             {
                 sumSquare += i;
             }
 
             // sumSquare *= sumSquare;
             sumSquare = sumSquare * sumSquare;
-            Console.WriteLine(String.Concat("Square of Sum of first 100 natural numbers is ", sumSquare));
+            Console.WriteLine("Square of Sum of first 100 natural numbers is {0}", sumSquare);
 
-            Console.WriteLine(String.Concat("Difference is ", sumSquare - squareSum));
+            return String.Format("Difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is {0}", sumSquare - squareSum);
         }
     }
 }

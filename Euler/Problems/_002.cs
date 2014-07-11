@@ -22,9 +22,9 @@ namespace Euler.Problems
     /// 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
     /// By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
     /// </summary>
-    class _002
+    public class _002 : IProblem
     {
-        public static Int32 Solve()
+        public String Solve()
         {
             var sum = 0;
 
@@ -47,7 +47,7 @@ namespace Euler.Problems
                     sum += nextTerm;
             }
 
-            return sum;
+            return String.Format("The sum of the even-valued terms in the Fibonacci sequence whose values do not exceed four million is {0}", sum);
         }
     }
 }
